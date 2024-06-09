@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 - Vue 3
 - Vue Router
@@ -6,4 +7,7 @@
 - @formkit/auto-animate
 - Composition API / Options API
 - ESLint
-- Prettier
+- # Prettier
+  ...
+  > > > > > > > a2a854c (remove readme)
+  > > > > > > > 2

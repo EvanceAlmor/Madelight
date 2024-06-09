@@ -1,48 +1,51 @@
 <script setup>
-import axios from 'axios'
-import { ref, computed, inject } from 'vue'
+import axios from "axios";
+import { ref, computed, inject } from "vue";
 
-import DrawerHead from './DrawerHead.vue'
-import CartItemList from './CartItemList.vue'
-import InfoBlock from './InfoBlock.vue'
+import DrawerHead from "./DrawerHead.vue";
+import CartItemList from "./CartItemList.vue";
+import InfoBlock from "./InfoBlock.vue";
 
 const props = defineProps({
   totalPrice: Number,
-  vatPrice: Number
-})
+  vatPrice: Number,
+});
 
-const { cart, closeDrawer } = inject('cart')
+const { cart, closeDrawer } = inject("cart");
 
-const isCreating = ref(false)
-const orderId = ref(null)
+const isCreating = ref(false);
+const orderId = ref(null);
 
 const createOrder = async () => {
   try {
-    isCreating.value = true
+    isCreating.value = true;
 
-    const { data } = await axios.post(`https://604781a0efa572c1.mokky.dev/orders`, {
-      items: cart.value,
-      totalPrice: props.totalPrice.value
-    })
+    const { data } = await axios.post(
+      `https://604781a0efa572c1.mokky.dev/orders`,
+      {
+        items: cart.value,
+        totalPrice: props.totalPrice.value,
+      }
+    );
 
-    cart.value = []
+    cart.value = [];
 
-    orderId.value = data.id
+    orderId.value = data.id;
   } catch (err) {
-    console.log(err)
+    console.log(err);
   } finally {
-    isCreating.value = false
+    isCreating.value = false;
   }
-}
+};
 
-const cartIsEmpty = computed(() => cart.value.length === 0)
-const buttonDisabled = computed(() => isCreating.value || cartIsEmpty.value)
+const cartIsEmpty = computed(() => cart.value.length === 0);
+const buttonDisabled = computed(() => isCreating.value || cartIsEmpty.value);
 </script>
 
 <template>
   <div class="fixed top-0 left-0 h-full w-full bg-black z-10 opacity-70"></div>
   <div class="bg-white w-96 h-full fixed right-0 top-0 z-20 p-8">
-    <DrawerHead />
+    <DrawerHead :head="Корзина" />
 
     <div v-if="!totalPrice || orderId" class="flex h-full items-center">
       <InfoBlock

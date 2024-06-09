@@ -7,13 +7,13 @@ defineProps({
   isFavorite: Boolean,
   isAdded: Boolean,
   onClickFavorite: Function,
-  onClickAdd: Function
-})
+  onClickAdd: Function,
+});
 </script>
 
 <template>
   <div
-    class="relative bg-white border border-slate-100 rounded-3xl p-8 cursor-pointer transition hover:-translate-y-2 hover:shadow-xl"
+    class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md lg:aspect-none group-hover:opacity-75 lg:h-80 relative border border-slate-100 rounded-3xl p-8 cursor-pointer transition hover:-translate-y-2 hover:shadow-xl"
   >
     <img
       v-if="onClickFavorite"
@@ -23,7 +23,7 @@ defineProps({
       @click="onClickFavorite"
     />
 
-    <img :src="imageUrl" alt="Sneaker" />
+    <img class="w-full h-auto" :src="imageUrl" alt="Sneaker" />
 
     <p class="mt-2">{{ title }}</p>
 

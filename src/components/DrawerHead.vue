@@ -1,7 +1,10 @@
 <script setup>
-import { inject } from 'vue'
+import { inject } from "vue";
 
-const { closeDrawer } = inject('cart')
+defineProps({
+  head: String,
+});
+const { closeDrawer } = inject("cart");
 </script>
 
 <template>
@@ -30,6 +33,6 @@ const { closeDrawer } = inject('cart')
         stroke-linejoin="round"
       />
     </svg>
-    <h2 class="text-2xl font-bold">Корзина</h2>
+    <h2 class="text-2xl font-bold">{{ head }}</h2>
   </div>
 </template>

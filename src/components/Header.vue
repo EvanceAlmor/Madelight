@@ -1,16 +1,9 @@
 <script setup>
 defineProps({
-  totalPrice: Number
-})
-function myFunction() {
-  var x = document.getElementById('myLinks')
-  if (x.style.display === 'block') {
-    x.style.display = 'none'
-  } else {
-    x.style.display = 'block'
-  }
-}
-const emit = defineEmits(['openDrawer'])
+  totalPrice: Number,
+});
+
+const emit = defineEmits(["openDrawer"]);
 </script>
 
 <template>
@@ -35,13 +28,17 @@ const emit = defineEmits(['openDrawer'])
       </li>
 
       <router-link to="/favorites">
-        <li class="flex items-center cursor-pointer gap-3 text-gray-500 hover:text-black">
+        <li
+          class="flex items-center cursor-pointer gap-3 text-gray-500 hover:text-black"
+        >
           <img src="/heart.svg" alt="Cart" />
           <span>Закладки</span>
         </li>
       </router-link>
 
-      <li class="flex items-center cursor-pointer gap-3 text-gray-500 hover:text-black">
+      <li
+        class="flex items-center cursor-pointer gap-3 text-gray-500 hover:text-black"
+      >
         <img src="/profile.svg" alt="Cart" />
         <span>Профиль</span>
       </li>
