@@ -40,7 +40,7 @@ defineProps({
             </div>
           </div>
           <div
-            class="absolute inset-y-0 right-0 hidden sm:ml-6 sm:block right-0 py-4"
+            class="absolute inset-y-0 right-0 hidden md:ml-6 md:block right-0 py-4"
           >
             <ul class="flex items-center gap-10 mr-4">
               <li
