@@ -12,9 +12,10 @@ defineProps({
 </script>
 
 <template>
-  <div
+  <!-- <div
     class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md lg:aspect-none group-hover:opacity-75 lg:h-80 relative border border-slate-100 rounded-3xl p-8 cursor-pointer transition hover:-translate-y-2 hover:shadow-xl"
-  >
+  > -->
+  <div class="w-full">
     <img
       v-if="onClickFavorite"
       :src="!isFavorite ? '/like-1.svg' : '/like-2.svg'"
