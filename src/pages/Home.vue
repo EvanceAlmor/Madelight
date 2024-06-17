@@ -136,7 +136,7 @@ watch(filters, fetchItems);
 
 <template>
   <Slider />
-  <div class="flex justify-between items-center">
+  <div class="bg-white flex justify-between items-center">
     <h2 class="text-3xl font-bold mb-auto">Товары</h2>
     <div class="md:hidden right-4">
       <select
