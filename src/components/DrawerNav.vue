@@ -18,19 +18,29 @@ defineProps({
   <Disclosure as="nav" class="bg-white-800" v-slot="{ open }">
     <div class="py-8 px-2 sm:px-6 lg:px-8 w-full">
       <div class="relative flex h-16 items-center justify-between w-full">
-        <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+        <div class="absolute inset-y-0 left-0 flex items-center md:hidden">
           <!-- Mobile menu button-->
           <DisclosureButton
             class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-white-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
           >
             <span class="absolute -inset-0.5" />
             <span class="sr-only">Open main menu</span>
-            <Bars3Icon v-if="!open" class="block h-6 w-6" aria-hidden="true" />
-            <XMarkIcon v-else class="block h-6 w-6" aria-hidden="true" />
+            <img
+              v-if="!open"
+              src="/menu.svg"
+              class="fill-gray-800 block h-6 w-6"
+              aria-hidden="true"
+            />
+            <img
+              v-else
+              src="/close2.svg"
+              class="block h-6 w-6"
+              aria-hidden="true"
+            />
           </DisclosureButton>
         </div>
         <div
-          class="flex flex-1 h-16 py-4 items-center justify-center sm:items-stretch sm:justify-start w-full"
+          class="flex flex-1 h-16 py-4 items-center justify-center md:items-stretch md:justify-start w-full"
         >
           <div class="flex items-center gap-4">
             <img class="w-10" src="/logo.png" alt="Your Company" />
@@ -47,7 +57,7 @@ defineProps({
                 @click="() => emit('openDrawer')"
                 class="flex items-center cursor-pointer gap-3 text-gray-500 hover:text-black"
               >
-                <img src="/cart.svg" alt="Cart" />
+                <img class="fill-gray-800" src="/cart.svg" alt="Cart" />
                 <b>{{ totalPrice }} руб.</b>
               </li>
 
@@ -75,7 +85,7 @@ defineProps({
       </div>
     </div>
 
-    <DisclosurePanel class="sm:hidden"
+    <DisclosurePanel class="md:hidden"
       ><ul class="flex items-center gap-10">
         <div class="space-y-1 px-2 pb-3 pt-2">
           <li

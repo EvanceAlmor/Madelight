@@ -136,11 +136,21 @@ watch(filters, fetchItems);
 
 <template>
   <div class="flex justify-between items-center">
-    <h2 class="text-3xl font-bold mb-8">Все кроссовки</h2>
+    <h2 class="text-3xl font-bold mb-auto">Все кроссовки</h2>
     <div class="md:hidden">
-      <li>
+      <!-- <li class="flex list-none">
         <img class="w-8" src="/filter.svg" alt="" />
-      </li>
+        <b class="pl-2 text-xl m-auto">Фильтры</b>
+      </li> -->
+      <div class="relative">
+        <img class="absolute left-4 top-3" src="/search.svg" />
+        <input
+          @input="onChangeSearchInput"
+          class="border rounded-md py-2 pl-11 pr-4 outline-none focus:border-gray-400"
+          type="text"
+          placeholder="Поиск..."
+        />
+      </div>
     </div>
     <div class="hidden md:flex gap-4">
       <select
