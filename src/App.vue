@@ -55,7 +55,7 @@ provide("cart", {
 
   <DrawerNav :total-price="totalPrice" @open-drawer="openDrawer" />
 
-  <div class="p-10">
+  <div class="p-4 md:p-10">
     <router-view></router-view>
   </div>
 </template>

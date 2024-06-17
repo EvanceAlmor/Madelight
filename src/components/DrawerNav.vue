@@ -16,7 +16,7 @@ defineProps({
 </script>
 <template>
   <Disclosure as="nav" class="bg-white-800" v-slot="{ open }">
-    <div class="py-8 px-2 sm:px-6 lg:px-8 w-full">
+    <div class="py-8 px-2 md:px-6 lg:px-8 w-full">
       <div class="relative flex h-16 items-center justify-between w-full">
         <div class="absolute inset-y-0 left-0 flex items-center md:hidden">
           <!-- Mobile menu button-->
@@ -28,7 +28,7 @@ defineProps({
             <img
               v-if="!open"
               src="/menu.svg"
-              class="fill-gray-800 block h-6 w-6"
+              class="block h-6 w-6"
               aria-hidden="true"
             />
             <img

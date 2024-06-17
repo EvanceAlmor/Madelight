@@ -140,7 +140,7 @@ watch(filters, fetchItems);
     <div class="md:hidden right-4">
       <select
         @change="onChangeSelect"
-        class="w-40 py-2 px-3 border rounded-md outline-none"
+        class="w-40 py-2 px-4 border rounded-md outline-none mr-4"
       >
         <option value="name">По названию</option>
         <option value="price">По цене (дешевые)</option>
@@ -174,7 +174,7 @@ watch(filters, fetchItems);
         <b class="pl-2 text-xl m-auto">Фильтры</b>
       </li> -->
     <div class="w-full relative">
-      <img class="absolute left-4 top-3" src="/search.svg" />
+      <img class="absolute left-4 top-7" src="/search.svg" />
       <input
         @input="onChangeSearchInput"
         class="w-full border mt-4 rounded-md py-2 pl-11 pr-4 outline-none focus:border-gray-400"
