@@ -1,12 +1,12 @@
 <script setup>
-const emit = defineEmits(['onClickRemove'])
+const emit = defineEmits(["onClickRemove"]);
 
 defineProps({
   id: Number,
   title: String,
   imageUrl: String,
-  price: Number
-})
+  price: Number,
+});
 </script>
 
 <template>
@@ -21,7 +21,7 @@ defineProps({
         <img
           @click="emit('onClickRemove')"
           class="opacity-40 hover:opacity-100 cursor-pointer transition"
-          src="/close.svg"
+          src="/close2.svg"
         />
       </div>
     </div>

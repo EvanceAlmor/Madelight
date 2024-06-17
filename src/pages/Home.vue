@@ -4,7 +4,7 @@ import axios from "axios";
 import debounce from "lodash.debounce";
 import { inject } from "vue";
 import CardList from "../components/CardList.vue";
-
+import Slider from "../components/Slider.vue";
 const { cart, addToCart, removeFromCart } = inject("cart");
 
 const items = ref([]);
@@ -135,12 +135,13 @@ watch(filters, fetchItems);
 </script>
 
 <template>
+  <Slider />
   <div class="flex justify-between items-center">
-    <h2 class="text-3xl font-bold mb-auto">Все кроссовки</h2>
+    <h2 class="text-3xl font-bold mb-auto">Товары</h2>
     <div class="md:hidden right-4">
       <select
         @change="onChangeSelect"
-        class="w-40 py-2 px-4 border rounded-md outline-none mr-4"
+        class="w-40 py-2 px-4 border border-slate-300 rounded-md outline-none"
       >
         <option value="name">По названию</option>
         <option value="price">По цене (дешевые)</option>

@@ -16,7 +16,7 @@ defineProps({
 </script>
 <template>
   <Disclosure as="nav" class="bg-white-800" v-slot="{ open }">
-    <div class="py-8 px-2 md:px-6 lg:px-8 w-full">
+    <div class="py-6 px-2 lg:px-40 w-full">
       <div class="relative flex h-16 items-center justify-between w-full">
         <div class="absolute inset-y-0 left-0 flex items-center md:hidden">
           <!-- Mobile menu button-->
@@ -28,27 +28,29 @@ defineProps({
             <img
               v-if="!open"
               src="/menu.svg"
-              class="block h-6 w-6"
+              class="transition opacity-50 hover:opacity-80 block h-6 w-6"
               aria-hidden="true"
             />
             <img
               v-else
               src="/close2.svg"
-              class="block h-6 w-6"
+              class="transition opacity-50 hover:opacity-80 block h-6 w-6"
               aria-hidden="true"
             />
           </DisclosureButton>
         </div>
         <div
-          class="flex flex-1 h-16 py-4 items-center justify-center md:items-stretch md:justify-start w-full"
+          class="flex flex-1 h-16 py-2 items-center justify-center md:items-stretch md:justify-start w-full"
         >
-          <div class="flex items-center gap-4">
-            <img class="w-10" src="/logo.png" alt="Your Company" />
-            <div>
-              <h2 class="text-xl font-bold uppercase">Vue Sneakers Git</h2>
-              <p class="text-slate-400">Магазин лучших кроссовок</p>
-            </div>
-          </div>
+          <router-link to="/">
+            <li class="flex items-center gap-2 sm:gap-4">
+              <img class="w-10" src="/logo.png" alt="Your Company" />
+              <div>
+                <h2 class="text-xl font-bold uppercase">Vue Sneakers Git</h2>
+                <p class="text-slate-400">Магазин лучших кроссовок</p>
+              </div>
+            </li></router-link
+          >
           <div
             class="absolute inset-y-0 right-0 hidden md:ml-6 md:block right-0 py-4"
           >
