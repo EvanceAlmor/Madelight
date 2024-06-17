@@ -137,20 +137,15 @@ watch(filters, fetchItems);
 <template>
   <div class="flex justify-between items-center">
     <h2 class="text-3xl font-bold mb-auto">Все кроссовки</h2>
-    <div class="md:hidden">
-      <!-- <li class="flex list-none">
-        <img class="w-8" src="/filter.svg" alt="" />
-        <b class="pl-2 text-xl m-auto">Фильтры</b>
-      </li> -->
-      <div class="relative">
-        <img class="absolute left-4 top-3" src="/search.svg" />
-        <input
-          @input="onChangeSearchInput"
-          class="border rounded-md py-2 pl-11 pr-4 outline-none focus:border-gray-400"
-          type="text"
-          placeholder="Поиск..."
-        />
-      </div>
+    <div class="md:hidden right-4">
+      <select
+        @change="onChangeSelect"
+        class="w-40 py-2 px-3 border rounded-md outline-none"
+      >
+        <option value="name">По названию</option>
+        <option value="price">По цене (дешевые)</option>
+        <option value="-price">По цене (дорогие)</option>
+      </select>
     </div>
     <div class="hidden md:flex gap-4">
       <select
@@ -171,6 +166,21 @@ watch(filters, fetchItems);
           placeholder="Поиск..."
         />
       </div>
+    </div>
+  </div>
+  <div class="md:hidden w-full">
+    <!-- <li class="flex list-none">
+        <img class="w-8" src="/filter.svg" alt="" />
+        <b class="pl-2 text-xl m-auto">Фильтры</b>
+      </li> -->
+    <div class="w-full relative">
+      <img class="absolute left-4 top-3" src="/search.svg" />
+      <input
+        @input="onChangeSearchInput"
+        class="w-full border mt-4 rounded-md py-2 pl-11 pr-4 outline-none focus:border-gray-400"
+        type="text"
+        placeholder="Поиск..."
+      />
     </div>
   </div>
 
