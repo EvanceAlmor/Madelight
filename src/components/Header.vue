@@ -12,8 +12,8 @@ const emit = defineEmits(["openDrawer"]);
       ><div class="flex items-center gap-4">
         <img src="/logo.png" alt="Logo" class="w-10" />
         <div>
-          <h2 class="text-xl font-bold uppercase">Vue Sneakers Git</h2>
-          <p class="text-slate-400">Магазин лучших кроссовок</p>
+          <h2 class="text-xl font-bold uppercase">Madelight</h2>
+          <p class="text-slate-400">Магазин для вашего дома</p>
         </div>
       </div></router-link
     >

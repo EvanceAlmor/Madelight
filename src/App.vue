@@ -3,6 +3,7 @@ import { ref, provide, watch, computed } from "vue";
 import Header from "./components/Header.vue";
 import Drawer from "./components/Drawer.vue";
 import DrawerNav from "./components/DrawerNav.vue";
+import Footer from "./components/Footer.vue";
 
 /* Корзина (START) */
 const cart = ref([]);
@@ -54,8 +55,6 @@ provide("cart", {
   <Drawer v-if="drawerOpen" :total-price="totalPrice" :vat-price="vatPrice" />
 
   <DrawerNav :total-price="totalPrice" @open-drawer="openDrawer" />
-
-  <div class="p-4 lg:p-40 bg-white">
-    <router-view></router-view>
-  </div>
+  <div><router-view></router-view></div>
+  <Footer />
 </template>
