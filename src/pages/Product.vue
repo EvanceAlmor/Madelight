@@ -87,11 +87,11 @@ const emit = defineEmits(["addToFavorite", "addToCart"]);
       <div
         class="aspect-h-3 aspect-w-2 overflow-hidden rounded-lg bg-gray-100 sm:col-span-4 lg:col-span-5"
       >
-        <img
+        <!-- <img
           src="sneakers/sneakers-3.jpg"
           alt="Two each of gray, white, and black shirts arranged on table."
           class="w-full object-cover object-center"
-        />
+        /> -->
       </div>
       <div class="sm:col-span-8 lg:col-span-7">
         <h2 class="text-2xl font-bold text-gray-900 sm:pr-12">
